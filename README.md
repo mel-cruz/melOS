@@ -4,7 +4,7 @@ A goofy little OS where you can see into my mind and creations.
 ![alt text](image.png)
 
 Try it here:
-<!-- Link Goes here -->
+https://mel-cruz.github.io/melOS/
 
 * There are 5 "apps" that you can open:
     * Melons - a fun little disclaimer written by me
