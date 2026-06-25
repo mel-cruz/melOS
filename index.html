@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alien+Block&family=Bitcount+Single:wght@100..900&family=Caveat:wght@400..700&family=Cinzel:wght@400..900&family=Ole&display=swap" rel="stylesheet">
+  </head>  
+
+ <body style="background-image: url(./gradient.png); background-size: cover; font-family: 'Courier New', monospace;">
+  <div class="topbar" id="top">
+    <p style="margin-left: 5px;">
+      <!-- melOS <br> -----<br> -->
+       melOS </p>
+   <p> <strong>an OS...</strong></p>
+
+    <p id="timeElement"
+    style="margin-right: 5px;">
+      <!-- 6/19/2026 <br>  -->
+      Time <br> 6/19/2026 <br>
+   </p>
+    <p><strong>...by Mel</strong></p>
+  </div>
+  <div class="topbar" id="second">
+   <p class="open" style="color:midnightblue" id="welcomeopen">Open Welcome?</p> 
+      <!-- formerly "Open melOS?" -->
+    </div>
+  <!-- #34eb89, -->
+
+  <div class="selected" id="desktopApps">
+    <!-- melon -->
+    <div class="icons" id="melonicon" style="padding: 3px;">
+      <img class= "open" src="./watermelon.png" style="width: 75px; height: 75px; border-radius: 10px;">
+      <h3 style="margin: 0px; color:red;">Melons</h3>
+      <p></p>
+    </div>
+    
+    <div class="window" id="melon" style="display:none; width: 450px">
+      <p class="moveheader" id="melonheader"><s>\ CLICK ME TO MOVE /</s></p>
+      <h2 style="color:honeydew">Concerning Melons.</h2>
+      <p>I would expect you to believe that this would be a site about melons, given the name of the site. Some of the colors are even the same as those of certain melons.</p>
+      <img style="width: 137.5px; height: 91.5px" src="./honeydew.png" />
+      <p>Unfortunately, as much as I would like this too, <strong>THIS ISN'T THE CASE.</strong></p>
+      <p>This OS simply belongs to a fellow (myself) known as Melissa, but MelissaOS was too long.</p>
+      <p>Hopefully this was not disappointing news. Enjoy this final stock image of a melon as an apology.</p>
+      <img style="width: 120px; height: 130px" src="./melon.png" />
+      <p></p>
+      <button class="closebutton" id="melonclose"><b>Close me.</b></button>
+    </div>
+    <!-- app #2 -->
+    <div class="icons" id="thinksicon" style="padding:5px">
+      <img class="open" src="./swirl.png" style="width: 65px; height: 65px; border-radius: 10px; ">
+      <h3 style="margin: 0px; color:blue;">Thinks</h3>
+      <p></p>
+    </div>
+
+    <div class="window" id="thinks" style="display:none; width: 500px">
+      <p class="moveheader" id="thinksheader"><s>\ CLICK ME TO MOVE /</s></p>
+      <h2>My Random Thinks  </h2>
+      <h3 style="font-family:'Bitcount Single', system-ui">(ideas/questions/etc)</h3>
+      <ul>
+        <li>6/24/26 4:25 PM ET - Life is actually pretty cool if you choose to live it properly.</li>
+      </ul>
+      <button class="closebutton" id="thinksclose"><b>Close me.</b></button>
+
+    </div>
+
+          <!-- melbot -->
+    <div class="icons" id="melboticon" style="padding: 3px">
+      <img class="open" src="./melbot.png" style="width: 75px; height: 75px; border-radius: 10px;">
+      <h3 style="margin: 0px; color: green;">MelBot</h3>
+      <p></p>
+    </div>
+
+    <div class="window" id="botWindow" style="display:none; width: 400px;">
+      <p class="moveheader" id="botWindowheader"><s>\ CLICK TO MOVE MELBOT V.1 /</s></p>
+      <h2 style="color:darkcyan; margin-bottom: 5px;">MelBot Chat "AI"</h2>
+      <p style="color:darkcyan; margin-bottom: 5px;">"The Best of The Best In Useful Chatbots! No doubts!"</p>
+      <!-- <p style="color:darkcyan; margin-bottom: 5px;"><small>For sure. </small></p> -->
+      
+      <!-- Interactive chat container -->
+      <div id="chatHistory" style="height: 150px; overflow-y: auto; border: 2px solid #6e0f00; background: #fff; padding: 5px; font-size: 14px; text-align: left; color: black;">
+        <p style="color: darkcyan; margin: 2px 0;"><b>melBot:</b> What do you want? I was sleeping.</p>
+      </div>
+      
+      <div style="margin-top: 10px; display: flex;">
+        <input type="text" id="chatInput" placeholder="Type a message..." style="flex-grow: 1; font-family: 'Courier New', monospace; padding: 5px;">
+        <button id="sendBtn" style="font-family: 'Courier New', monospace; margin-left: 5px; color:rgb(0, 179, 255)">Send</button>
+      </div>
+      <br>
+      <button class="closebutton" id="botclose"><b>Close me.</b></button>
+    </div>
+    <div class="icons" id="snakeicon" style="padding:3px">
+      <img class= "open" src="./snake.png" style="width: 75px; height: 75px; border-radius: 10px;">
+      <h3 style="margin: 0px; color:#847aa0;">Snake</h3>
+      <!-- formerly rgb(31, 85, 185) -->
+      <p></p>
+    </div>
+    <div class="window" id="snake" style="display: none;">
+      <p class="moveheader" id="snakeheader"><s>\ CLICK ME TO MOVE /</s></p>
+      <!-- game embed goes here -->
+      <iframe src="https://snake-game-woad-five.vercel.app/" id="snakegameframe" style="width: 410px; height: 450px; border: none; display: block; margin: 0 auto;"></iframe>
+      <button class="closebutton" id="snakeclose"><b>Close me.</b></button>
+    </div>
+    <!-- Music App Icon -->
+    <div class="icons" id="musicicon" style="padding: 2px;">
+      <img class="open" src="./headphones.png" style="width: 75px; height: 75px; border-radius: 10px;">
+      <h3 style="margin: 0px; color: darkblue;">Snippet</h3>
+      <p></p>
+    </div>
+
+    <!-- Music Player Window Layout -->
+    <div class="window" id="music" style="display:none; width: 420px; padding: 10px;">
+      <p class="moveheader" id="musicheader"><s>\ DRAG ME TO MOVE /</s></p>
+      <h2 style="color:darkgreen; margin: 5px 0;">Melissa's Song Snippets</h2>
+      <p style="font-size: 11px; font-style: italic; margin-top: 0;">I like to make music. You've been graced with a snippet of what I'm working on.</p>
+
+      <!-- Track Playlist Container -->
+      <div style="background: cadetblue; padding: 10px; border-radius: 8px; border: 2px dashed rgb(0, 173, 142);">
+        
+        <!-- Track Item -->
+        <div style="margin-bottom: 15px;">
+          <!-- when i have something to share -->
+          <!-- <p style="margin: 0 0 5px 0; color: cornsilk; font-size: 13px;"><b>[Title]</b></p>
+          <audio controls style="width: 100%; ">
+            <source src="./music/placeholder.mp3" type="audio/mpeg">
+            Your browser does not support the audio player element.
+          </audio> -->
+          <!-- end of this. next is when nothing's there -->
+          <p style="color:aquamarine;font-family: Ole; font-size: 25px;">Darn. I don't have anything to share right now. <br> Come back soon for something cool!</p>
+        </div>
+
+
+      </div>
+
+      <br>
+      <button class="closebutton" id="musicclose"><b>CLOSE ME</b></button>
+    </div>
+
+  </div> <!-- End of desktopApps -->
+
+  <div class="window" id="welcome" style="width:615px"> 
+	<p class="moveheader" id="welcomeheader"> 
+		<s>\ CLICK ME TO MOVE /</s>
+	</p>
+    <h1 style="margin: 4px;">Welcome to melOS</h1>
+    <h2>Introduction.</h2>
+    <p style="font-family: 'Caveat', cursive; font-size: 25px">Hello world!</p>
+    <p style="font-family: 'Cinzel', serif;">Salve</p>
+    <p style="font-size: 10px">Hola. <s>That's enough.</s></p>
+    <img style="width: 60px; height: 60px" src="./present.png" />
+    <p style="color:darkblue"><strong>Read this from top to bottom.</strong> (I'm sure you would have anyways.) <br> 
+    <s>There is no escaping unless you read until the end.</s> </p>
+    <p>So you want to know about me? Good luck. I barely know myself</p>
+    <button style="font-family: 'Courier New', monospace">Press this cool Button for something cool!</button>
+    <p>Bet you thought that did something. Yikes.</p>
+    <button style="font-family: 'Courier New', monospace"> I <i>promise</i> that this one does something.</button>
+    <p>Sike. I lied. I'm sorry I'm not usually a liar. </p>
+    <p style="font-family: 'Bitcount Single', system-ui;">I will say: <strong>I'm also usually more mature than this.</strong></p>
+    <p><s>Anyways my name is Melissa <br> Here you can find cool stuff made and written by me(l).</s></p>
+    <p style="font-family: 'Ole', cursive; font-size: 25px">Enough welcome shenanigans from me. </p> <!-- "I don't really know what to say."-->
+    <p style="font-family: 'Cinzel', serif; color:red;"><b>Do you dare to Close melOS ↓?</b></p>
+    <button class="closebutton" id="welcomeclose"><b>Close Me</b></button>
+    <p style="font-size:30px"> </p>
+ </div>
+
+ <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </body>
+  <!-- </text> -->
+</html>
