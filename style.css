@@ -1,0 +1,128 @@
+.closebutton {
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    color:red;
+    background-color:darkslategray;
+}
+
+.window {
+    position: absolute; 
+    top: 90%; 
+    left: 50%; 
+    transform: translate(-50%, -45%); 
+    border: dashed rgb(0, 173, 142);
+    /* width: 640px; */
+    width: fit-content;
+    border-radius: 15px; 
+    padding: 5px;
+    background-color: #34eb89;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.moveheader {
+    font-family: 'Alien Block', sans-serif; 
+    color:cornsilk;
+}
+
+.topbar {
+    background-image: url(./bgif.gif); 
+    display: flex; 
+    justify-content: space-between; 
+    color: #6e0f00;
+}
+
+.sidebar {
+    /* background-image: url(./bgif.gif);  */
+    background-color: darkcyan;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    color: #6e0f00;
+
+    width: 60px;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    /* top:0; */
+
+}
+
+.open {
+    cursor: pointer;
+}
+
+.selected {
+    padding-top: 5px; 
+    padding-left: 1px;
+}
+
+.icons {
+    text-align: center; 
+    /* padding: 3px;  */
+    filter: drop-shadow(0 0 8px rgb(0, 147, 24)); 
+    width: fit-content
+}
+
+
+
+/* FOR MELBOT */
+
+
+/* Chat display history text window frame */
+#chatHistory {
+    scrollbar-width: thin;
+    scrollbar-color: #6e0f00 #ffffff;
+    border-radius: 4px;
+}
+
+/* Scrollbar customization rules for webkit displays */
+#chatHistory::-webkit-scrollbar {
+    width: 8px;
+}
+#chatHistory::-webkit-scrollbar-track {
+    background: #ffffff;
+}
+#chatHistory::-webkit-scrollbar-thumb {
+    background-color: #6e0f00;
+    border-radius: 4px;
+}
+
+/* Standardized styles for text logs inside the terminal frame */
+.user-line {
+    color: #005500; 
+    margin: 4px 0;
+    border-left: 3px solid #00aa00;
+    padding-left: 5px;
+}
+
+.bot-line {
+    color: #6e0f00; 
+    margin: 4px 0;
+    border-left: 3px solid #6e0f00;
+    padding-left: 5px;
+}
+
+/* Input layout field for typing messages */
+#chatInput {
+    border: 2px dashed rgb(0, 173, 142);
+    background-color: cornsilk;
+    color: #6e0f00;
+    padding: 5px;
+}
+
+/* Send button styling targeting your theme elements */
+#sendBtn {
+    background-color: darkslategray;
+    border: 2px solid #6e0f00;
+    color: red;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 5px;
+    padding: 5px 15px;
+}
+
+#sendBtn:hover {
+    background-color: #6e0f00;
+    color: cornsilk;
+}
