@@ -66,8 +66,9 @@ var welcomeScreen = document.querySelector("#welcome")
 var melonScreen = document.querySelector("#melon")
 var thinksScreen = document.querySelector("#thinks")
 var snakeScreen = document.querySelector("#snake")
-
 var musicScreen = document.querySelector("#music");
+var canvasScreen = document.querySelector("#canvas");
+
 
 // Mount draggable utility and depth layer tap listeners
 dragElement(document.getElementById("music"));
@@ -106,6 +107,10 @@ var snakeScreenOpen = document.querySelector("#snakeicon")
 var musicScreenClose = document.querySelector("#musicclose")
 
 var musicScreenOpen = document.querySelector("#musicicon")
+
+var canvasScreenClose = document.querySelector("#canvasclose")
+
+var canvasScreenOpen = document.querySelector("#canvasicon")
 
 
 welcomeScreenClose.addEventListener("click", function() {
@@ -148,6 +153,14 @@ musicScreenOpen.addEventListener("click", function() {
   openWindow(musicScreen);
 });
 
+canvasScreenClose.addEventListener("click", function(e) {
+  e.stopPropagation();
+  closeWindow(canvasScreen);
+});
+canvasScreenOpen.addEventListener("click", function() {
+  openWindow(canvasScreen);
+});
+
 
 var selectedIcon = undefined
 
@@ -169,7 +182,6 @@ function handleIconTap(element) {
     selectIcon(element)
   }
 }
-
 
 //make most recent open window go on top
 var biggestIndex = 1;
@@ -198,10 +210,12 @@ function initializeWindow(elementName) {
   dragElement(screen)
 }
 
-initializeWindow("welcome")
-initializeWindow("melon")
-initializeWindow("thinks")
-initializeWindow("snake")
+initializeWindow("welcome");
+initializeWindow("melon");
+initializeWindow("thinks");
+initializeWindow("snake");
+initializeWindow("music");
+initializeWindow("canvas");
 
 //MELBOT
 const melbotIcon = document.getElementById('melboticon'); 
@@ -295,3 +309,105 @@ if (chatInput) {
         }
     });
 }
+
+
+// Canvas
+const canvas = document.getElementById("theCanvas");
+const ctx = canvas.getContext("2d");
+
+// Controls
+const colorPicker = document.getElementById("colorPicker");
+const brushSize = document.getElementById("brushSize");
+const clearCanvas = document.getElementById("clearCanvas");
+const saveCanvas = document.getElementById("saveCanvas");
+
+const brushButton = document.getElementById("brush");
+const eraserButton = document.getElementById("eraser");
+const fillButton = document.getElementById("fill");
+
+// State
+let drawing = false;
+let currentTool = "brush";
+
+// Default brush settings
+ctx.strokeStyle = colorPicker.value;
+ctx.lineWidth = brushSize.value;
+ctx.lineCap = "round";
+ctx.lineJoin = "round";
+
+// Update color
+colorPicker.addEventListener("input", () => {
+    if (currentTool === "brush") {
+        ctx.strokeStyle = colorPicker.value;
+    }
+});
+
+// Update brush size
+brushSize.addEventListener("input", () => {
+    ctx.lineWidth = brushSize.value;
+});
+
+// Tool buttons
+brushButton.onclick = () => {
+    currentTool = "brush";
+};
+
+eraserButton.onclick = () => {
+    currentTool = "eraser";
+};
+
+fillButton.onclick = () => {
+    currentTool = "fill";
+};
+
+// Mouse down
+canvas.addEventListener("mousedown", (e) => {
+
+    // Fill tool (currently fills the whole canvas)
+    if (currentTool === "fill") {
+        ctx.fillStyle = colorPicker.value;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        return;
+    }
+
+    drawing = true;
+
+    if (currentTool === "brush") {
+        ctx.strokeStyle = colorPicker.value;
+    } else if (currentTool === "eraser") {
+        ctx.strokeStyle = "white";
+    }
+
+    ctx.beginPath();
+    ctx.moveTo(e.offsetX, e.offsetY);
+});
+
+// Drawing
+canvas.addEventListener("mousemove", (e) => {
+    if (!drawing) return;
+
+    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.stroke();
+});
+
+// Stop drawing
+canvas.addEventListener("mouseup", () => {
+    drawing = false;
+});
+
+canvas.addEventListener("mouseleave", () => {
+    drawing = false;
+});
+
+// Clear
+clearCanvas.onclick = () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+};
+
+// Save
+saveCanvas.onclick = () => {
+    const link = document.createElement("a");
+    link.download = "drawing.png";
+    link.href = canvas.toDataURL("image/png");
+    link.click();
+};

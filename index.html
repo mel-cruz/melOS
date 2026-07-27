@@ -22,11 +22,39 @@
   </div>
   <div class="topbar" id="second">
    <p class="open" style="color:midnightblue" id="welcomeopen">Open Welcome?</p> 
-      <!-- formerly "Open melOS?" -->
+   <!-- <p style="color:midnightblue;"><a href="https://mel-site.com/" style="color:midnightblue; text-decoration: none;">See mel-site?</a></p> -->
+   <p style="color:midnightblue;"><a href="https://mel-site.com/" style="color:midnightblue; text-decoration: none;">MelissaSite</a></p>
     </div>
   <!-- #34eb89, -->
 
+  <!-- right icons -->
   <div class="selected" id="desktopApps">
+    <div class="righticons" id="canvasicon">
+      <img class="open" src="./canvas.png" style="width: 75px; height: 75px; border-radius: 10px;">
+      <h3 style="margin: 0px; color: rgb(255, 80, 80);">Canvas</h3>
+      
+      <p></p>
+    </div>
+  <div class="window" id="canvas" style="display:none; width: 450px;">
+    <p class="moveheader" id="canvasheader"><s> \ CLICK ME TO MOVE / </s></p>
+    <h2>CANVAS</h2>
+    <p style="color:mediumslateblue;">Here you can draw whatever your heart desires.</p>
+    <!-- actual content -->
+    <div id="canvasToolbar">
+      <input type="color" id="colorPicker">
+      <input type="range" id="brushSize" min="1" max="30" value="3">
+      <button class="canvasButton" id="clearCanvas">Clear</button>
+      <button class="canvasButton" id="saveCanvas">Save</button>
+      <canvas id="theCanvas" width="450" height="450" style="border:1px dashed rgba(64, 224, 200, 0.76)"></canvas>
+      <button class="canvasButton" id="brush">Brush</button>
+      <button class="canvasButton" id="eraser">Eraser</button>
+      <button class="canvasButton" id="fill">Fill Background</button>
+    </div>
+
+    <button class="closebutton" id="canvasclose"><b>Close me.</b></button>
+  </div>
+
+    <!-- left icons -->
     <!-- melon -->
     <div class="icons" id="melonicon" style="padding: 3px;">
       <img class= "open" src="./watermelon.png" style="width: 75px; height: 75px; border-radius: 10px;">
@@ -34,6 +62,7 @@
       <p></p>
     </div>
     
+
     <div class="window" id="melon" style="display:none; width: 450px">
       <p class="moveheader" id="melonheader"><s>\ CLICK ME TO MOVE /</s></p>
       <h2 style="color:honeydew">Concerning Melons.</h2>
@@ -64,7 +93,8 @@
         <li>7/8/26 11:11 AM ET - I think it's a sign that something good's going to happen because 
           I happened to be looking at this at this wishful minute.</li>
         <li>7/12/26 5:25 PM ET - Am I the only person who really can despise past versions of myself?</li>
-        <li>I really meant to be more consistent with these. Sometimes you try to commit to too many things and end up committing to none.</li>
+        <li>7/16/26 4:21 PM ET - I really meant to be more consistent with these. Sometimes you try to commit to too many things and end up committing to none.</li>
+        <li>7/24/26 9:35 AM ET - </li>
       </ul>
       <button class="closebutton" id="thinksclose"><b>Close me.</b></button>
 
@@ -118,10 +148,9 @@
     <div class="window" id="music" style="display:none; width: 420px; padding: 10px;">
       <p class="moveheader" id="musicheader"><s>\ DRAG ME TO MOVE /</s></p>
       <h2 style="color:darkgreen; margin: 5px 0;">Melissa's Song Snippets</h2>
-      <p style="font-size: 11px; font-style: italic; margin-top: 0;">I like to make music. You've been graced with a snippet of what I'm currently working on.</p>
-	  <p style="font-size: 10px; color: darkgreen;">Maybe it's a solo bassline, riff, melody, or a whole mix. Or maybe some lyrics.</p>
+      <p style="font-size: 11px; font-style: italic; margin-top: 0;">I like to make music. You've been graced with a snippet of what I'm working on.</p>
 
-      <!-- Track Playlist Container -->
+      <!-- Track Container -->
       <div style="background: cadetblue; padding: 10px; border-radius: 8px; border: 2px dashed rgb(0, 173, 142);">
         
         <!-- Track Item -->
@@ -142,13 +171,13 @@
           <!-- <p style="color:aquamarine;font-family: Ole; font-size: 25px;">Darn. I don't have anything to share right now. <br> Come back soon for something cool!</p> -->
         </div>
 
-
       </div>
 
       <br>
       <button class="closebutton" id="musicclose"><b>CLOSE ME</b></button>
     </div>
 
+    
   </div> <!-- End of desktopApps -->
 
   <div class="window" id="welcome" style="width:615px"> 
@@ -181,3 +210,4 @@
   </body>
   <!-- </text> -->
 </html>
+

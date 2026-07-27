@@ -63,6 +63,14 @@
     width: fit-content
 }
 
+.righticons {
+    float: right;
+    text-align: center; 
+    /* padding: 3px;  */
+    filter: drop-shadow(0 0 8px rgb(22, 0, 147)); 
+    width: fit-content
+}
+
 
 
 /* FOR MELBOT */
@@ -125,4 +133,13 @@
 #sendBtn:hover {
     background-color: #6e0f00;
     color: cornsilk;
+}
+
+#theCanvas {
+    background-color: white;
+}
+
+.canvasButton {
+    font-family: 'Caveat', cursive; 
+    font-size: 15px;
 }
