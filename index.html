@@ -27,33 +27,6 @@
     </div>
   <!-- #34eb89, -->
 
-  <!-- right icons -->
-  <div class="selected" id="desktopApps">
-    <div class="righticons" id="canvasicon">
-      <img class="open" src="./canvas.png" style="width: 75px; height: 75px; border-radius: 10px;">
-      <h3 style="margin: 0px; color: rgb(255, 80, 80);">Canvas</h3>
-      
-      <p></p>
-    </div>
-  <div class="window" id="canvas" style="display:none; width: 450px;">
-    <p class="moveheader" id="canvasheader"><s> \ CLICK ME TO MOVE / </s></p>
-    <h2>CANVAS</h2>
-    <p style="color:mediumslateblue;">Here you can draw whatever your heart desires.</p>
-    <!-- actual content -->
-    <div id="canvasToolbar">
-      <input type="color" id="colorPicker">
-      <input type="range" id="brushSize" min="1" max="30" value="3">
-      <button class="canvasButton" id="clearCanvas">Clear</button>
-      <button class="canvasButton" id="saveCanvas">Save</button>
-      <canvas id="theCanvas" width="450" height="450" style="border:1px dashed rgba(64, 224, 200, 0.76)"></canvas>
-      <button class="canvasButton" id="brush">Brush</button>
-      <button class="canvasButton" id="eraser">Eraser</button>
-      <button class="canvasButton" id="fill">Fill Background</button>
-    </div>
-
-    <button class="closebutton" id="canvasclose"><b>Close me.</b></button>
-  </div>
-
     <!-- left icons -->
     <!-- melon -->
     <div class="icons" id="melonicon" style="padding: 3px;">
@@ -75,7 +48,7 @@
       <p></p>
       <button class="closebutton" id="melonclose"><b>Close me.</b></button>
     </div>
-    <!-- app #2 -->
+    <!-- app 2, thinks -->
     <div class="icons" id="thinksicon" style="padding:5px">
       <img class="open" src="./swirl.png" style="width: 65px; height: 65px; border-radius: 10px; ">
       <h3 style="margin: 0px; color:blue;">Thinks</h3>
@@ -94,7 +67,11 @@
           I happened to be looking at this at this wishful minute.</li>
         <li>7/12/26 5:25 PM ET - Am I the only person who really can despise past versions of myself?</li>
         <li>7/16/26 4:21 PM ET - I really meant to be more consistent with these. Sometimes you try to commit to too many things and end up committing to none.</li>
-        <li>7/24/26 9:35 AM ET - </li>
+        <li>7/24/26 9:35 AM ET - Wow summer's flying by so fast</li>
+        <li>8/10/26 7:12 PM ET - You know to think I've had so many things I wanted to do and I barely managed to do any of them. Jack of all trades I guess. </li>
+        <li>10/31/26 9:56 AM ET - You know how much of a procrastinator I am when I'm frantically trying to finish this up to ship on the very last day.
+          I love how this was meant to be some cool inspirational thing and it's just me ranting about lack of commitment to things now. </li>
+        <li>10/31/26 10:15 AM ET - I'm going as a cowgirl today for Halloween. Howdy folks. This will probably be my last of what was meant to be way more of these. </li>
       </ul>
       <button class="closebutton" id="thinksclose"><b>Close me.</b></button>
 
@@ -175,6 +152,42 @@
 
       <br>
       <button class="closebutton" id="musicclose"><b>CLOSE ME</b></button>
+    </div>
+ <!-- right icons -->
+  <div class="selected" id="desktopApps">
+    <div class="icons" id="canvasicon">
+      <img class="open" src="./canvas.png" style="width: 75px; height: 75px; border-radius: 10px;">
+      <h3 style="margin: 0px; color: rgb(255, 80, 80);">Canvas</h3>
+      <p></p>
+    </div>
+    <div class="window" id="canvas" style="display:none; width: 450px;">
+      <p class="moveheader" id="canvasheader"><s> \ CLICK ME TO MOVE / </s></p>
+      <h2>CANVAS</h2>
+      <p style="color:mediumslateblue;">Here you can draw whatever your heart desires.</p>
+      
+      <div id="canvasToolbar">
+        <input type="color" id="colorPicker">
+        <input type="range" id="brushSize" min="1" max="30" value="3">
+        <button class="canvasButton" id="clearCanvas">Clear</button>
+        <button class="canvasButton" id="saveCanvas">Save</button>
+        <canvas id="theCanvas" width="450" height="450" style="border:1px dashed rgba(64, 224, 200, 0.76)"></canvas>
+        <button class="canvasButton" id="brush">Brush</button>
+        <button class="canvasButton" id="eraser">Eraser</button>
+        <button class="canvasButton" id="fill">Fill Background</button>
+      </div>
+
+      <button class="closebutton" id="canvasclose"><b>Close me.</b></button>
+    </div>
+
+    <div class="icons" id="quotesicon" style="padding: 3px;">
+      <img class="open" src="./left-quote.png" style="width: 75px; height: 75px; border-radius: 10px;">
+      <h3 style="margin:0px; color: black;">Quotes</h3>
+    </div>
+    <div class="window" id="quotes" style="display:none; width:500px;">
+      <p class="moveheader" id="quotesheader"><s>\ CLICK ME TO MOVE /</s></p>
+      <iframe src="https://mel-site.com/random-quotes/" id="quotesframe" style="width: 450px; height: 450px; border: none; display: block; margin: 0 auto;"></iframe>
+      <p style="color:midnightblue;"><a href="https://mel-site.com/random-quotes/">Visit the host website!</a></p>
+      <button class="closebutton" id="quotesclose"><b>Close me.</b></button>
     </div>
 
     

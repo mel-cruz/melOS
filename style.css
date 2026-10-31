@@ -57,19 +57,21 @@
 }
 
 .icons {
+
     text-align: center; 
-    /* padding: 3px;  */
     filter: drop-shadow(0 0 8px rgb(0, 147, 24)); 
-    width: fit-content
+    width: fit-content;
 }
 
-.righticons {
-    float: right;
-    text-align: center; 
-    /* padding: 3px;  */
+/* this was a failed attempt at separating app icons to the left and right */
+/* .righticons {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    align-content:flex-end;
     filter: drop-shadow(0 0 8px rgb(22, 0, 147)); 
-    width: fit-content
-}
+    width: fit-content;
+} */
 
 
 
@@ -83,7 +85,6 @@
     border-radius: 4px;
 }
 
-/* Scrollbar customization rules for webkit displays */
 #chatHistory::-webkit-scrollbar {
     width: 8px;
 }
@@ -94,8 +95,6 @@
     background-color: #6e0f00;
     border-radius: 4px;
 }
-
-/* Standardized styles for text logs inside the terminal frame */
 .user-line {
     color: #005500; 
     margin: 4px 0;
@@ -109,8 +108,6 @@
     border-left: 3px solid #6e0f00;
     padding-left: 5px;
 }
-
-/* Input layout field for typing messages */
 #chatInput {
     border: 2px dashed rgb(0, 173, 142);
     background-color: cornsilk;
@@ -118,7 +115,6 @@
     padding: 5px;
 }
 
-/* Send button styling targeting your theme elements */
 #sendBtn {
     background-color: darkslategray;
     border: 2px solid #6e0f00;
